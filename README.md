@@ -1,7 +1,7 @@
 # vampire-locker.github.io
 
 # 关于本项目
-使用 [Hexo](https://hexo.io/zh-cn/docs/) 进行搭建的[个人博客](https://vampire-locker.github.io/)
+使用 [Hexo](https://hexo.io/zh-cn/docs/) 进行搭建的 [个人博客](https://vampire-locker.github.io/)
 
 # 学习使用
 
