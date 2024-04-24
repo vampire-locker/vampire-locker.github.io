@@ -99,6 +99,7 @@ git add . && git commit -m 'blog init' && git push
 查看一下 /vampire-locker.github.io/.gitignore/ 文件，原来 `public` 文件夹被加入了忽略名单。因此我们后面才需要将 `deploy` 的 `branch` 配置为 `gh-pages` 分支。即原始的博客工程文件提交到 `main` ，而生成的静态网站的文件提交到 `gh-pages` 分支。
 ![](git-ignore.png)
 
+ 这里补充一下，由于使用 `GitHub Pages`，博客工程的仓库 `vampire-locker.github.io` 必须为公有仓库。为了保护个人隐私，可以将该仓库的主分支，也就是博客的源文件推送到私有仓库，反正也只是方便个人在不同的工作环境下同步数据的目的，无所谓存放在哪里。静态网站所在的 `gh-pages`分支保持不变即可，即下面这个 `deploy` 配置保持不变。
 
 
 ## 7、部署网站
