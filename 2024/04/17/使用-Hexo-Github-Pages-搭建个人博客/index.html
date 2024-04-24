@@ -29,7 +29,7 @@
 <meta property="og:image" content="http://example.com/2024/04/17/%E4%BD%BF%E7%94%A8-Hexo-Github-Pages-%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/github-pages.png">
 <meta property="og:image" content="http://example.com/2024/04/17/%E4%BD%BF%E7%94%A8-Hexo-Github-Pages-%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/hexo-deploy6.png">
 <meta property="article:published_time" content="2024-04-17T08:09:20.000Z">
-<meta property="article:modified_time" content="2024-04-17T08:10:21.502Z">
+<meta property="article:modified_time" content="2024-04-24T10:23:31.929Z">
 <meta property="article:author" content="xiaoxin wu">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http://example.com/2024/04/17/%E4%BD%BF%E7%94%A8-Hexo-Github-Pages-%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/git-create-repository1.png">
@@ -158,6 +158,7 @@
 <p><img src="/2024/04/17/%E4%BD%BF%E7%94%A8-Hexo-Github-Pages-%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/git-push1.png"></p>
 <p>聪明的你一定会发现，前面我们提到生成的静态文件存放在 <code>public</code> 文件夹下，可是并没有被提交到线上。<br><img src="/2024/04/17/%E4%BD%BF%E7%94%A8-Hexo-Github-Pages-%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/git-push2.png"></p>
 <p>查看一下 &#x2F;vampire-locker.github.io&#x2F;.gitignore&#x2F; 文件，原来 <code>public</code> 文件夹被加入了忽略名单。因此我们后面才需要将 <code>deploy</code> 的 <code>branch</code> 配置为 <code>gh-pages</code> 分支。即原始的博客工程文件提交到 <code>main</code> ，而生成的静态网站的文件提交到 <code>gh-pages</code> 分支。<br><img src="/2024/04/17/%E4%BD%BF%E7%94%A8-Hexo-Github-Pages-%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/git-ignore.png"></p>
+<p> 这里补充一下，由于使用 <code>GitHub Pages</code>，博客工程的仓库 <code>vampire-locker.github.io</code> 必须为公有仓库。为了保护个人隐私，可以将该仓库的主分支，也就是博客的源文件推送到私有仓库，参考这篇<a href="/2024/04/24/%E4%BF%AE%E6%94%B9-Git-%E4%BB%93%E5%BA%93%E7%9A%84%E8%BF%9C%E7%A8%8B%E4%BB%93%E5%BA%93/">《修改 Git 仓库的远程仓库》</a>，反正也只是方便个人在不同的工作环境下同步数据的目的，无所谓存放在哪里。静态网站所在的 <code>gh-pages</code>分支保持不变即可，即下面这个 <code>deploy</code> 配置保持不变。</p>
 <h2 id="7、部署网站"><a href="#7、部署网站" class="headerlink" title="7、部署网站"></a>7、部署网站</h2><p>在 <code>_config.yml</code> 中配置静态网站要部署的地址和分支</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repo: git@github.com:vampire-locker/vampire-locker.github.io.git</span><br><span class="line">  branch: gh-pages</span><br></pre></td></tr></table></figure>
 
@@ -485,7 +486,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2024/04/17/%E4%BD%BF%E7%94%A8-Hexo-Github-Pages-%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/" data-id="clvbu4lbx0001j7wzgsryfyb2" data-title="使用 Hexo + Github Pages 搭建个人博客" class="article-share-link"><span class="fa fa-share">分享</span></a>
+      <a data-url="http://example.com/2024/04/17/%E4%BD%BF%E7%94%A8-Hexo-Github-Pages-%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/" data-id="clvdo5cit0001shwzelgag3jj" data-title="使用 Hexo + Github Pages 搭建个人博客" class="article-share-link"><span class="fa fa-share">分享</span></a>
       
       
       
@@ -538,6 +539,10 @@
     <h3 class="widget-title">最新文章</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2024/04/24/%E4%BF%AE%E6%94%B9-Git-%E4%BB%93%E5%BA%93%E7%9A%84%E8%BF%9C%E7%A8%8B%E4%BB%93%E5%BA%93/">修改 Git 仓库的远程仓库</a>
+          </li>
         
           <li>
             <a href="/2024/04/17/Hexo-%E5%88%9B%E5%BB%BA%E6%96%87%E7%AB%A0/">Hexo 创建文章</a>
